@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
 import src.Soma;
+import src.Subtracao;
 
 
 public class main{
     public static void main(String[] args) {
         int value;
         Soma somar = new Soma();
+        Subtracao subtrair = new Subtracao();
         boolean continuar = true;
         while(continuar){
             Scanner scan = new Scanner(System.in);        
@@ -43,6 +45,9 @@ public class main{
             switch(value){
                 case 1: 
                     somar.realizarSoma();
+                    break;
+                case 2:
+                    subtrair.realizarSubtracao();;
                     break;
             }
         }
