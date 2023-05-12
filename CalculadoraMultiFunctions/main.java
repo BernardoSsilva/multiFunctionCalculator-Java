@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 import src.Divisao;
 import src.Multiplicacao;
+import src.Pitagoras;
 import src.Soma;
 import src.Subtracao;
 
-
-public class main{
+public class main {
     public static void main(String[] args) {
         int value;
         String checar;
@@ -14,10 +14,11 @@ public class main{
         Subtracao subtrair = new Subtracao();
         Multiplicacao multiplicar = new Multiplicacao();
         Divisao dividir = new Divisao();
+        Pitagoras pitagoras = new Pitagoras();
 
         boolean continuar = true;
-        while(continuar){
-            Scanner scan = new Scanner(System.in);        
+        while (continuar) {
+            Scanner scan = new Scanner(System.in);
             System.out.println("Calculadora Multifunções");
             System.out.println(" ");
             System.out.println("============ ");
@@ -48,23 +49,27 @@ public class main{
             System.out.println(" ");
             System.out.println("Digite a operação que voce deseja: ");
             value = scan.nextInt();
-            switch(value){
-                case 1: 
+            switch (value) {
+                case 1:
                     somar.realizarSoma();
                     break;
                 case 2:
-                    subtrair.realizarSubtracao();;
+                    subtrair.realizarSubtracao();
+                    ;
                     break;
                 case 3:
-                    multiplicar.realizarMultiplicacao();;
+                    multiplicar.realizarMultiplicacao();
+                    ;
                     break;
                 case 4:
                     dividir.realizarDivisao();
+                case 5:
+                    pitagoras.realizarCalculo();
             }
             System.out.println(" ");
-            System.out.println("Deseja encerrar o funcionamento?(S/N)");
+            System.out.println("Deseja continuar o funcionamento?(S/N)");
             checar = scan.next().toUpperCase();
-            if(checar.equals("N")){
+            if (checar.equals("N")) {
                 continuar = false;
             }
         }
