@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import src.Bhaskara;
 import src.Divisao;
 import src.Multiplicacao;
 import src.Pitagoras;
@@ -15,6 +16,7 @@ public class main {
         Multiplicacao multiplicar = new Multiplicacao();
         Divisao dividir = new Divisao();
         Pitagoras pitagoras = new Pitagoras();
+        Bhaskara bhaskara = new Bhaskara();
 
         boolean continuar = true;
         while (continuar) {
@@ -65,9 +67,11 @@ public class main {
                     dividir.realizarDivisao();
                 case 5:
                     pitagoras.realizarCalculo();
+                case 6:
+                    bhaskara.realizarCalculo();
             }
             System.out.println(" ");
-            System.out.println("Deseja continuar o funcionamento?(S/N)");
+            System.out.println("Deseja continuar o funcionamento do programa?(S/N)");
             checar = scan.next().toUpperCase();
             if (checar.equals("N")) {
                 continuar = false;
