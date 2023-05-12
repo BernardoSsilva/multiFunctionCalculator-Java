@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import src.Divisao;
 import src.Multiplicacao;
 import src.Soma;
 import src.Subtracao;
@@ -8,9 +9,12 @@ import src.Subtracao;
 public class main{
     public static void main(String[] args) {
         int value;
+        String checar;
         Soma somar = new Soma();
         Subtracao subtrair = new Subtracao();
         Multiplicacao multiplicar = new Multiplicacao();
+        Divisao dividir = new Divisao();
+
         boolean continuar = true;
         while(continuar){
             Scanner scan = new Scanner(System.in);        
@@ -54,7 +58,14 @@ public class main{
                 case 3:
                     multiplicar.realizarMultiplicacao();;
                     break;
-                
+                case 4:
+                    dividir.realizarDivisao();
+            }
+            System.out.println(" ");
+            System.out.println("Deseja encerrar o funcionamento?(S/N)");
+            checar = scan.next().toUpperCase();
+            if(checar.equals("N")){
+                continuar = false;
             }
         }
     }
