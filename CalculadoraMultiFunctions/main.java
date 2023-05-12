@@ -4,6 +4,7 @@ import src.Bhaskara;
 import src.Divisao;
 import src.Multiplicacao;
 import src.Pitagoras;
+import src.RaizQuadrada;
 import src.Soma;
 import src.Subtracao;
 
@@ -17,6 +18,7 @@ public class main {
         Divisao dividir = new Divisao();
         Pitagoras pitagoras = new Pitagoras();
         Bhaskara bhaskara = new Bhaskara();
+        RaizQuadrada raiz = new RaizQuadrada();
 
         boolean continuar = true;
         while (continuar) {
@@ -65,10 +67,16 @@ public class main {
                     break;
                 case 4:
                     dividir.realizarDivisao();
+                    break;
                 case 5:
                     pitagoras.realizarCalculo();
+                    break;
                 case 6:
                     bhaskara.realizarCalculo();
+                    break;
+                case 7:
+                    raiz.realizarCalculo();
+                    break;
             }
             System.out.println(" ");
             System.out.println("Deseja continuar o funcionamento do programa?(S/N)");
