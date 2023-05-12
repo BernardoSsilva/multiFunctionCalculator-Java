@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import src.Multiplicacao;
 import src.Soma;
 import src.Subtracao;
 
@@ -9,6 +10,7 @@ public class main{
         int value;
         Soma somar = new Soma();
         Subtracao subtrair = new Subtracao();
+        Multiplicacao multiplicar = new Multiplicacao();
         boolean continuar = true;
         while(continuar){
             Scanner scan = new Scanner(System.in);        
@@ -49,6 +51,10 @@ public class main{
                 case 2:
                     subtrair.realizarSubtracao();;
                     break;
+                case 3:
+                    multiplicar.realizarMultiplicacao();;
+                    break;
+                
             }
         }
     }
