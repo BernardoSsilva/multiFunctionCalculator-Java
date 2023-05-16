@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
+import src.Area;
 import src.Bhaskara;
 import src.Divisao;
+import src.Exponenciacao;
 import src.Multiplicacao;
 import src.Pitagoras;
 import src.RaizQuadrada;
@@ -19,6 +21,8 @@ public class main {
         Pitagoras pitagoras = new Pitagoras();
         Bhaskara bhaskara = new Bhaskara();
         RaizQuadrada raiz = new RaizQuadrada();
+        Exponenciacao potencia = new Exponenciacao();
+        Area area = new Area();
 
         boolean continuar = true;
         while (continuar) {
@@ -43,13 +47,11 @@ public class main {
             System.out.println(" ");
             System.out.println("Digite 8 para exponenciação: ");
             System.out.println(" ");
-            System.out.println("Digite 9 para encontrar a raiz cubica: ");
+            System.out.println("Digite 9 para calcular area: ");
             System.out.println(" ");
-            System.out.println("Digite 10 para calcular area: ");
+            System.out.println("Digite 10 para calcular o perimetro de uma circunferencia: ");
             System.out.println(" ");
-            System.out.println("Digite 11 para calcular o perimetro de uma circunferencia: ");
-            System.out.println(" ");
-            System.out.println("Digite 12 para calcular velocidade media: ");
+            System.out.println("Digite 11 para calcular velocidade media: ");
             System.out.println(" ");
             System.out.println("Digite a operação que voce deseja: ");
             value = scan.nextInt();
@@ -76,6 +78,12 @@ public class main {
                     break;
                 case 7:
                     raiz.realizarCalculo();
+                    break;
+                case 8:
+                    potencia.realizarExponenciacao();
+                    break;
+                case 9:
+                    area.Calcular();
                     break;
             }
             System.out.println(" ");
